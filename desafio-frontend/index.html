@@ -1,123 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<title>Registro Brasil</title>
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<!--Ajax & JQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-    crossorigin="anonymous"></script>
 
-	</head>
-	<body>
+<head>
+	<meta charset="UTF-8">
+	<title>Registro Brasil</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<!--Ajax & JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	</style>
 
-		<header>
-			<div class="container">
-				<h1 class="titulo"> Registro Brasil </h1>
-			</div>
-		</header>
-		<main>
-			<div class="anime">
-			<section class="container ">
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+			<h1 class="titulo"> Registro Brasil </h1>
+		</div>
+	</header>
+	<main>
+		<div>
+			<section class="container">
 
 				<h2>Lista de Cadastros</h2>
 				<label for="filtrar-tabela">Filtrar: </label>
 				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome ">
-				
+
 				<div class="texto">
 					<p>Para deletar dê duplo clique na linha da tabela corresponte ao cliente desejado.</p>
 				</div>
-				
-				<table>
-					<thead>
-						<tr>
-							<th>ID</th>
-							<th>Código</th>
-							<th>Nome</th>
-							<th>Nome Fantasia</th>
-							<th>CNPJ</th>	
-							<th>CEP</th>
-							<th>Endereço</th>
-							<th>Bairro</th>	
-							<th>Localidade</th>
-							<th>Logradouro</th>
-							<th>Estado</th>
-							<th>Data</th>											
-						</tr>
-					</thead>
 
-					<tbody id="tabela-clientes">
-						<tr class="cliente" id="primeiro" >
-							<td class="info-id">987</td>
-							<td class="info-codigo">9877</td>
-							<td class="info-nome">Paulo</td>
-							<td class="info-nome_fantasia">Padaria Revi</td>
-							<td class="info-cnpj">1451254111121</td>
-							<td class="info-cep">09190320</td>
-							<td class="info-endereco">Rua José de Paula</td>
-							<td class="info-bairro">Jardim Mara</td>
-							<td class="info-localidade">Santo André</td>
-							<td class="info-logradouro">Indiferente</td>
-							<td class="info-uf">SP</td>
-							<td class="info-data">2020-09-13</td>
-						</tr>
+				<div class="table-responsive" id="table-all">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Código</th>
+								<th>Nome</th>
+								<th>Nome Fantasia</th>
+								<th>CNPJ</th>
+								<th>CEP</th>
+								<th>Endereço</th>
+								<th>Bairro</th>
+								<th>Localidade</th>
+								<th>Logradouro</th>
+								<th>Estado</th>
+								<th>Data</th>
+							</tr>
+						</thead>
 
-						<tr class="cliente" >
-							<td class="info-id">986</td>
-							<td class="info-codigo">9876</td>
-							<td class="info-nome">Karla</td>
-							<td class="info-nome_fantasia">Mercearia</td>
-							<td class="info-cnpj">1451258821121</td>
-							<td class="info-cep">09190320</td>
-							<td class="info-endereco">Rua José de Paula</td>
-							<td class="info-bairro">Jardim Mara</td>
-							<td class="info-localidade">Santo André</td>
-							<td class="info-logradouro">Indiferente</td>
-							<td class="info-uf">PA</td>
-							<td class="info-data">2020-09-14</td>
-						</tr>
+						<tbody id="tabela-clientes">
+							<tr class="cliente" id="primeiro">
+								<td class="info-id">987</td>
+								<td class="info-codigo">9877</td>
+								<td class="info-nome">Paulo</td>
+								<td class="info-nome_fantasia">Padaria Revi</td>
+								<td class="info-cnpj">1451254111121</td>
+								<td class="info-cep">09190320</td>
+								<td class="info-endereco">Rua José de Paula</td>
+								<td class="info-bairro">Jardim Mara</td>
+								<td class="info-localidade">Santo André</td>
+								<td class="info-logradouro">Indiferente</td>
+								<td class="info-uf">SP</td>
+								<td class="info-data">2020-09-13</td>
+							</tr>
 
-						<tr class="cliente" >
-							<td class="info-id">985</td>
-							<td class="info-codigo">9857</td>
-							<td class="info-nome">Gabriel</td>
-							<td class="info-nome_fantasia">Games</td>
-							<td class="info-cnpj">145125417899</td>
-							<td class="info-cep">09190320</td>
-							<td class="info-endereco">Rua José de Paula</td>
-							<td class="info-bairro">Jardim Mara</td>
-							<td class="info-localidade">Santo André</td>
-							<td class="info-logradouro">Indiferente</td>
-							<td class="info-uf">BA</td>
-							<td class="info-data">2020-09-12</td>
-						</tr>
-					
-					</tbody>
-				</table>
+							<tr class="cliente">
+								<td class="info-id">986</td>
+								<td class="info-codigo">9876</td>
+								<td class="info-nome">Karla</td>
+								<td class="info-nome_fantasia">Mercearia</td>
+								<td class="info-cnpj">1451258821121</td>
+								<td class="info-cep">09190320</td>
+								<td class="info-endereco">Rua José de Paula</td>
+								<td class="info-bairro">Jardim Mara</td>
+								<td class="info-localidade">Santo André</td>
+								<td class="info-logradouro">Indiferente</td>
+								<td class="info-uf">PA</td>
+								<td class="info-data">2020-09-14</td>
+							</tr>
+
+							<tr class="cliente">
+								<td class="info-id">985</td>
+								<td class="info-codigo">9857</td>
+								<td class="info-nome">Gabriel</td>
+								<td class="info-nome_fantasia">Games</td>
+								<td class="info-cnpj">145125417899</td>
+								<td class="info-cep">09190320</td>
+								<td class="info-endereco">Rua José de Paula</td>
+								<td class="info-bairro">Jardim Mara</td>
+								<td class="info-localidade">Santo André</td>
+								<td class="info-logradouro">Indiferente</td>
+								<td class="info-uf">BA</td>
+								<td class="info-data">2020-09-12</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+
 				<span id="erro-ajax" class="invisivel">Erro ao buscar os dados dos clientes</span>
-				<button id="buscar-clientes" class="botao bto-principal">Buscar da base</button>
+				<button id="buscar-clientes" class="btn btn-success mt-3">Buscar base</button>
 			</section>
 
-<section class="container">
-	<h2 id="titulo-form">Cadastrar</h2>
-	<ul id="mensagens-erro"></ul>
-	<form id="form-adiciona">
+			<section class="container">
+				<h2 id="titulo-form">Cadastrar</h2>
+				<ul id="mensagens-erro"></ul>
+				<form id="form-adiciona">
 
 					<div class="grupo">
-									<label for="id">ID:</label>
-									<input id="id" name="id" type="number" placeholder="digite o id " class="campo">
+						<label for="id">ID:</label>
+						<input id="id" name="id" type="number" placeholder="digite o id " class="campo">
 					</div>
 
 					<div class="grupo">
-									<label for="codigo">Código:</label>
-									<input id="codigo" name="codigo" type="number" placeholder="digite o codigo " class="campo campo-medio">
+						<label for="codigo">Código:</label>
+						<input id="codigo" name="codigo" type="number" placeholder="digite o código "
+							class="campo campo-medio">
 					</div>
 
 					<div class="grupo">
@@ -126,74 +136,74 @@
 					</div>
 
 					<div class="grupo">
-									<label for="nome">Nome:</label>
-									<input id="nome" name="nome" type="text" placeholder="digite o nome " class="campo campo-medio">
+						<label for="nome">Nome:</label>
+						<input id="nome" name="nome" type="text" placeholder="digite o nome " class="campo campo-medio">
 					</div>
 
 					<div class="grupo">
-									<label for="nome_fantasia">Nome Fantasia:</label>
-									<input id="nome_fantasia" type="text" placeholder="digite o nome fantasia " class="campo campo-medio">
+						<label for="nome_fantasia">Nome Fantasia:</label>
+						<input id="nome_fantasia" type="text" placeholder="digite o nome fantasia "
+							class="campo campo-medio">
 					</div>
 
 					<div class="grupo">
 						<label for="cnpj">CNPJ:</label>
 						<input id="cnpj" name="cnpj" type="text" placeholder="digite o cnpj " class="campo">
-		</div>
+					</div>
 
-		<div class="grupo">
+					<div class="grupo">
 						<label for="endereco">Endereço:</label>
-						<input id="endereco" name="endereco" type="text" placeholder="digite a endereco " class="campo campo-medio">
-		</div>		
+						<input id="endereco" name="endereco" type="text" placeholder="digite seu endereço "
+							class="campo campo-medio">
+					</div>
 
-		<div class="grupo">
-			<label for="cep">CEP:</label>
-			<input id="cep" name="cep" type="text" placeholder="digite o cep" class="campo campo-medio" onclick="consultaCep()">	
+					<div class="grupo">
+						<label for="cep">CEP:</label>
+						<input id="cep" name="cep" type="text" placeholder="digite o cep" class="campo campo-medio"
+							onclick="consultaCep()">
+					</div>
+
+					<button class="btn btn-secondary" id="buscar-btn" type="button" onclick="consultaCep()"
+						title="Digite o CEP e clique em Buscar">Consultar</button>
+
+					<ul class="list-group list-group-horizontal-sm">
+
+						<div class="grupo">
+							<label for="bairro">Bairro:</label>
+							<li class="campo campo-medio list-group-item " id="bairro"></li>
+						</div>
+
+						<div class="grupo">
+							<label for="localidade">Localidade:</label>
+							<li class="campo medio list-group-item" id="localidade"></li><br />
+						</div>
+
+						<div class="grupo">
+							<label for="logradouro">Logradouro:</label>
+							<li class="campo campo-medio list-group-item" id="logradouro"></li>
+						</div>
+
+						<div class="grupo">
+							<label for="uf">Estado / UF:</label>
+							<li class="campo campo-medio list-group-item" id="uf"></li>
+						</div>
+
+
+					</ul>
+					<button id="adicionar-cliente" class="btn btn-success">Adicionar</button>
+				</form>
+			</section>
 		</div>
+	</main>
+	<!--JavaScript-->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="js/form.js"></script>
+	<script src="js/deleta-cliente.js"></script>
+	<script src="js/filtrar-cliente.js"></script>
+	<script src="js/listar-clientes.js"></script>
+	<script src="js/busca-cep.js"></script>
 
-		<button class=" campo campo-medio " id="buscar-btn" type="button" onclick="consultaCep()" title="Digite o CEP e clique em Buscar">Buscar</button>
-<ul>
+</body>
 
-
-
-		<div class="grupo">
-						<label for="bairro">Bairro:</label>
-						<li class="campo campo-medio" id="bairro"></li>
-						<!-- <input id="bairro" type="text" placeholder="digite o bairro " class="campo campo-medio"> -->
-		</div>
-		
-		<div class="grupo">
-			<label for="localidade">Localidade:</label>
-			<li class="campo medio" id="localidade"></li><br />
-			<!-- <input id="localidade" name="localidade" type="text" placeholder="digite o localidade " class="campo medio"> -->
-</div>
-
-<div class="grupo">
-			<label for="logradouro">Logradouro:</label>
-			<li class="campo campo-medio" id="logradouro"></li>
-			<!-- <input id="logradouro" name="logradouro" type="text" placeholder="digite o logradouro " class="campo campo-medio"> -->
-</div>
-
-<div class="grupo">
-			<label for="uf">Estado / UF:</label>
-			<li class="campo campo-medio" id="uf"></li>
-			<!-- <input id="uf" name="uf" type="text" placeholder="digite o estado ou distrito " class="campo campo-medio"> -->
-</div>
-
-		
-</ul>
-					<button id="adicionar-cliente" class="botao bto-principal">Adicionar</button>
-	</form>
-</section>
-</div>
-		</main>
-		<!--JavaScript-->
-		<script src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-		<script src="js/form.js"></script>
-		<script src="js/deleta-cliente.js"></script>
-		<script src="js/filtrar-cliente.js"></script>
-		<script src="js/listar-clientes.js"></script>
-		<script src="js/busca-cep.js"></script>
-		
-	</body>
 </html>
