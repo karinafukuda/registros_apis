@@ -1,0 +1,194 @@
+*{
+	box-sizing: border-box;
+ }
+
+body{
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 0.8rem;
+	background-color:rgb(212, 241, 250) ;
+}
+
+header{
+	background-image: linear-gradient(rgb(4, 47, 95), rgb(8, 101, 163));
+	height: 5em;
+	color: #fafafa;
+	margin-bottom: 1em;
+}
+
+header h1{
+	font-size: 2.3em;
+	display:inline-block;
+	vertical-align:	middle;
+}
+
+header h2{
+	font-size: 1.8em;
+	display:inline-block;
+	vertical-align:	middle;
+}
+
+header .container:before{
+	content: '';
+	display:inline-block;
+	height: 100%;
+	vertical-align:	middle;
+}
+
+.container{
+	width: 85%;
+	height: 90%;
+	margin: 0 auto;
+}
+
+section{
+	margin: 2em 0;
+	overflow: hidden;
+}
+
+section h2{
+	font-size: 2.3em;
+	font-weight: 700;
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid rgb(159, 163, 134);
+	margin-bottom: .5em;
+	margin-top: 1em;
+}
+
+.texto{
+	padding: 3px;
+	margin-bottom: 10px;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+table{
+	width: 100%;
+	margin-bottom : .7em;
+ table-layout: fixed;
+}
+
+td, th {
+	padding: .7em;
+	margin: 0;
+	border: 1px solid rgb(128, 153, 204);
+	text-align: center;
+	box-sizing: border-box !important;
+}
+
+th{
+	font-weight: bold;
+	background-color: #EEE;
+}
+
+label{
+	color: rgb(10, 93, 100);
+	font-weight: 700;
+	display: block;
+	margin-bottom: .2em;
+}
+
+.campo{
+	margin: 0;
+	padding-bottom: 1em;
+	width: 100%;
+	border: 1px solid rgb(26, 38, 46);
+	padding: .7em;
+	width: 100%;
+}
+
+.campo-medio{
+	display: inline-block;
+	padding-right: .5em;
+}
+
+.grupo{
+	width: 32%;
+	display: inline-block;
+	padding: 10px 0px;
+}
+
+button{
+	padding: .5em 2em;
+	border: 0;
+	border-radius: 5px;
+	border-bottom: 2px solid;
+	font-size: 1.2em;
+	cursor: pointer;
+	margin: 0;
+	margin-top: -3px;
+	color: #fff;
+	background-color:#094b1d;
+	border-color: #021607;
+	width: 15%;
+ display: block;
+ clear: both;
+ margin: 10px 0px;
+}
+
+button:active{
+	margin-top:0px;
+	border: 0;
+	background-color: #023515;
+}
+
+button:hover{
+	background-color: #011a09;
+	transition:ease-out 0.3s;
+}
+
+button[disabled=disabled], button:disabled {
+ background-color: gray;
+	border-color: darkgray;
+
+}
+
+.adicionar-cliente{
+ margin-top: 30px;
+}
+
+ul{
+	margin:0;
+	padding: 0;
+}
+
+li {
+	background-color: #fafafa !important;
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 10px 0px;
+}
+#buscar-btn{
+		display: absolute;
+		align-items:center;
+		text-align:center;
+		max-width: 200px;
+		max-height: 30px;
+		padding: 6.8px;
+}
+.campo-invalido{
+	border: 1px solid red;
+}
+
+.cliente-invalido {
+	background-color: orange;
+}
+
+#mensagens-erro{
+	color: red;
+}
+
+.fadeOut{
+	opacity: 0;
+	transition: 0.5s;
+}
+
+#filtrar-tabela{
+	width: 200px;
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+.invisivel{
+	display: none;
+}
